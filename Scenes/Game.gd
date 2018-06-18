@@ -22,7 +22,23 @@ func _ready():
 
 func _input(event):
 	if event.is_pressed():
-		if state == STATES.TITLE or state == STATES.SCOREBOARD_OUT:
+		if event is InputEventMouse:
+			pass
+		elif event is InputEventScreenTouch:
+			var newEvent = InputEventAction.new()
+			newEvent.pressed = true
+			if event.position.x < 512:
+				if event.position.y < 300:
+					newEvent.action = "StoveA"
+				else:
+					newEvent.action = "StoveC"
+			else:
+				if event.position.y < 300:
+					newEvent.action = "StoveB"
+				else:
+					newEvent.action = "StoveD"
+			Input.parse_input_event(newEvent)
+		elif state == STATES.TITLE or state == STATES.SCOREBOARD_OUT:
 			title_anim.play("Fade")
 			instruction.reset()
 			instruction.set_process_input(true)

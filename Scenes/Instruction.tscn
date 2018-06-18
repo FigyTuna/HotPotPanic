@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/Instruction.gd" type="Script" id=1]
 [ext_resource path="res://Images/black.png" type="Texture" id=2]
-[ext_resource path="res://Images/instructions.png" type="Texture" id=3]
-[ext_resource path="res://Images/key.png" type="Texture" id=4]
+[ext_resource path="res://Images/touch.png" type="Texture" id=3]
+[ext_resource path="res://Images/instructions.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Title.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Sounds/ding.wav" type="AudioStream" id=6]
 
@@ -39,60 +39,47 @@ position = Vector2( 511.994, 300 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="ReadyA" type="Sprite" parent="." index="1"]
 
-position = Vector2( 531.869, 308.292 )
-scale = Vector2( 0.15, 0.15 )
+position = Vector2( 256, 150 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="ReadyB" type="Sprite" parent="." index="2"]
+
+position = Vector2( 768, 150 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ReadyA" type="Sprite" parent="." index="2"]
+[node name="ReadyC" type="Sprite" parent="." index="3"]
 
-position = Vector2( 103, 352 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+position = Vector2( 256, 450 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="LabelA" type="Label" parent="." index="3"]
+[node name="ReadyD" type="Sprite" parent="." index="4"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 81.0
-margin_top = 310.0
-margin_right = 121.0
-margin_bottom = 359.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
-text = "Q"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+position = Vector2( 768, 450 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="ReadyB" type="Sprite" parent="." index="4"]
+[node name="Sprite" type="Sprite" parent="." index="5"]
 
-position = Vector2( 917, 352 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 520.789, 374.774 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="LabelB" type="Label" parent="." index="5"]
+[node name="Label" type="Label" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 898.0
-margin_top = 314.0
-margin_right = 938.0
-margin_bottom = 363.0
+margin_left = 202.0
+margin_top = 19.0
+margin_right = 793.0
+margin_bottom = 116.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -100,73 +87,15 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 5 )
-text = "P"
+text = "Touch the corners of the screen
+to activate the burners"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="ReadyC" type="Sprite" parent="." index="6"]
-
-position = Vector2( 140, 508 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="LabelC" type="Label" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 117.0
-margin_top = 468.0
-margin_right = 157.0
-margin_bottom = 517.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
-text = "A"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="ReadyD" type="Sprite" parent="." index="8"]
-
-position = Vector2( 880, 508 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="LabelD" type="Label" parent="." index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 860.0
-margin_top = 471.0
-margin_right = 900.0
-margin_bottom = 520.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
-text = "L"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="10"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -176,7 +105,7 @@ playback_speed = 1.0
 anims/Fade = SubResource( 1 )
 blend_times = [  ]
 
-[node name="Ding" type="AudioStreamPlayer" parent="." index="11"]
+[node name="Ding" type="AudioStreamPlayer" parent="." index="8"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0

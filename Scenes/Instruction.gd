@@ -16,19 +16,19 @@ signal instructions_complete()
 
 func _input(event):
 	if event.is_action_pressed("StoveA") and not a:
-		readyA.modulate.a = 1
+		readyA.modulate.a = 0.6
 		a = true
 		ready_sound.play()
 	if event.is_action_pressed("StoveB") and not b:
-		readyB.modulate.a = 1
+		readyB.modulate.a = 0.6
 		b = true
 		ready_sound.play()
 	if event.is_action_pressed("StoveC") and not c:
-		readyC.modulate.a = 1
+		readyC.modulate.a = 0.6
 		c = true
 		ready_sound.play()
 	if event.is_action_pressed("StoveD") and not d:
-		readyD.modulate.a = 1
+		readyD.modulate.a = 0.6
 		d = true
 		ready_sound.play()
 	
@@ -36,10 +36,10 @@ func _input(event):
 		emit_signal("instructions_complete")
 
 func reset():
-	readyA.modulate.a = 0.3
-	readyB.modulate.a = 0.3
-	readyC.modulate.a = 0.3
-	readyD.modulate.a = 0.3
+	readyA.modulate.a = 0
+	readyB.modulate.a = 0
+	readyC.modulate.a = 0
+	readyD.modulate.a = 0
 
 	a = false
 	b = false

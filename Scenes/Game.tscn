@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Stove.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Scoreboard.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sounds/anttisinstrumentals+coffeedonutandpowdersnow.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Fonts/Title.tres" type="DynamicFont" id=7]
 
 [node name="Game" type="Node2D" index="0"]
 
@@ -31,6 +32,26 @@ pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
+
+[node name="Debug" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="game_over" from="Stove" to="." method="_on_game_over"]
 
