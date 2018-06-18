@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/spaghett.png" type="Texture" id=2]
+
+[node name="SmallPot" index="0" instance=ExtResource( 1 )]
+
+cool_rate = 2.0
+heat_rate = 2.4
+
+[node name="Food" type="Sprite" parent="." index="2"]
+
+position = Vector2( 103.717, -132.907 )
+scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

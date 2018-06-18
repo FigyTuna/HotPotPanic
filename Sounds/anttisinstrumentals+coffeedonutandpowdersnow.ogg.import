@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/anttisinstrumentals+coffeedonutandpowdersnow.ogg-6affb357a197b0d496f0306ed53d456b.oggstr"
+
+[deps]
+
+source_file="res://Sounds/anttisinstrumentals+coffeedonutandpowdersnow.ogg"
+dest_files=[ "res://.import/anttisinstrumentals+coffeedonutandpowdersnow.ogg-6affb357a197b0d496f0306ed53d456b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

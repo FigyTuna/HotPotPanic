@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/StovePlate.gd" type="Script" id=1]
+[ext_resource path="res://Images/burner.png" type="Texture" id=2]
+[ext_resource path="res://Images/hotburner.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/slide.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/coin.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/fall.wav" type="AudioStream" id=6]
+
+[node name="StovePlate" type="Node2D"]
+
+script = ExtResource( 1 )
+action_key = ""
+
+[node name="Burner" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Hot" type="Sprite" parent="." index="1"]
+
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.5, 0.31 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Slide" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Clear" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Fail" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+

@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Stove.gd" type="Script" id=1]
+[ext_resource path="res://Images/stove.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/StovePlate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/Title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Images/pot_lg.png" type="Texture" id=5]
+
+[node name="Stove" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 517.347, 299.942 )
+scale = Vector2( 0.364435, 0.364435 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StovePlateA" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 306.492, 383.207 )
+action_key = "StoveA"
+
+[node name="StovePlateB" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 733.662, 389.315 )
+action_key = "StoveB"
+
+[node name="StovePlateC" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 272.57, 458.92 )
+action_key = "StoveC"
+
+[node name="StovePlateD" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 759.545, 461.868 )
+action_key = "StoveD"
+
+[node name="PotsCleared" type="Label" parent="." index="5"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 433.0
+margin_top = 123.0
+margin_right = 730.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Score: 0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Life1" type="Sprite" parent="." index="6"]
+
+visible = false
+position = Vector2( 43, 33 )
+rotation = -0.731138
+scale = Vector2( 0.0508732, 0.0508733 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Life2" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( 102.512, 33.4877 )
+rotation = -0.731138
+scale = Vector2( 0.0508732, 0.0508733 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Life3" type="Sprite" parent="." index="8"]
+
+visible = false
+position = Vector2( 163, 33 )
+rotation = -0.731138
+scale = Vector2( 0.0508732, 0.0508733 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="pot_cooked" from="StovePlateA" to="." method="_on_pot_cooked"]
+
+[connection signal="pot_failed" from="StovePlateA" to="." method="_on_pot_failed"]
+
+[connection signal="stove_cleared" from="StovePlateA" to="." method="_on_stove_cleared"]
+
+[connection signal="pot_cooked" from="StovePlateB" to="." method="_on_pot_cooked"]
+
+[connection signal="pot_failed" from="StovePlateB" to="." method="_on_pot_failed"]
+
+[connection signal="stove_cleared" from="StovePlateB" to="." method="_on_stove_cleared"]
+
+[connection signal="pot_cooked" from="StovePlateC" to="." method="_on_pot_cooked"]
+
+[connection signal="pot_failed" from="StovePlateC" to="." method="_on_pot_failed"]
+
+[connection signal="stove_cleared" from="StovePlateC" to="." method="_on_stove_cleared"]
+
+[connection signal="pot_cooked" from="StovePlateD" to="." method="_on_pot_cooked"]
+
+[connection signal="pot_failed" from="StovePlateD" to="." method="_on_pot_failed"]
+
+[connection signal="stove_cleared" from="StovePlateD" to="." method="_on_stove_cleared"]
+
+

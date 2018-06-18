@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/potato.png" type="Texture" id=2]
+
+[node name="LargePot" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -26.8834, -3.94795 )
+cool_rate = 1.3
+heat_rate = 0.4
+cook_time = 2.5
+
+[node name="Food" type="Sprite" parent="." index="2"]
+
+position = Vector2( 15.0166, -122.856 )
+scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/soup.png" type="Texture" id=2]
+
+[node name="RegularPot" instance=ExtResource( 1 )]
+
+cook_time = 4.0
+
+[node name="Food" type="Sprite" parent="." index="2"]
+
+position = Vector2( -2.71456, -121.913 )
+scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+
